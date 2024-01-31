@@ -1,8 +1,11 @@
 {
   "name": "wk-publicfn",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "-- @param {*} arr 遍历的数组\r -- @param {*} logic 每层处理的逻辑\r -- @param {*} childrenName 节点字段",
+  "main": "dist/my-library.umd.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/webcuiwenke/wk-publicFn/issues"
   },
-  "homepage": "https://github.com/webcuiwenke/wk-publicFn#readme"
+  "homepage": "https://github.com/webcuiwenke/wk-publicFn#readme",
+  "devDependencies": {
+    "vite": "^5.0.10"
+  }
 }
