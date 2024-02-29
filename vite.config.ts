@@ -16,10 +16,14 @@ export default defineConfig({
           //   },
           // },
         },
-       
+
       ],
     }),
   ],
+  server: {
+    host: true,
+    port: 3333,
+  },
   build: {
     lib: {
       entry: './src/myLibrary.js', // 指定你的JS入口文件
