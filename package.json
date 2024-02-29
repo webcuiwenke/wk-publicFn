@@ -7,7 +7,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
     "build": "vite build"
   },
   "repository": {
@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/webcuiwenke/wk-publicFn#readme",
   "devDependencies": {
-    "vite": "^5.0.10"
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vite-plugin-html": "^3.2.2"
   }
 }

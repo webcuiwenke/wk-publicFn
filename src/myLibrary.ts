@@ -5,7 +5,7 @@
  * @param {*} childrenName 节点字段
  */
 export function deepArrErgodic(
-  arr,
+  arr:Array<any>,
   logic = () => {},
   childrenName = "children"
 ) {
@@ -30,7 +30,7 @@ export function deepArrErgodic(
  * @params targetId:目标节点id
  * @return parentInfo:目标节点的父级信息
  */
-export function findParentInfo(list, targetId, parentInfo = []) {
+export function findParentInfo(list: any, targetId: string, parentInfo = []) {
   for (let item of list) {
     if (item.id === targetId) {
       return parentInfo;
@@ -52,7 +52,7 @@ export function findParentInfo(list, targetId, parentInfo = []) {
  * @params frontObj:要赋值的对象
  * @params afterObj:赋值后的对象
  */
-export function objCopy(frontObj, afterObj) {
+export function objCopy(frontObj: any, afterObj: any) {
   for (let key in frontObj) {
     for (let el in afterObj) {
       if (key == el) {
@@ -67,7 +67,7 @@ export function objCopy(frontObj, afterObj) {
  * @param {*} item
  * @returns
  */
-export function lastMeun(item) {
+export function lastMeun(item: any) {
   if (!item.children) return item;
   if (item.children.length == 0) return item;
   for (let i = 0; i < item.children.length; i++) {
