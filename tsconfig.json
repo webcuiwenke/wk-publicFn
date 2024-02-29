@@ -2,11 +2,14 @@
   "include": ["**/*"],
   "exclude": [],
   "compilerOptions": {
+    "allowImportingTsExtensions": true,
     "target": "es2016",
-    "module": "commonjs",
+    "module": "es2015",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "noEmit": true
   }
 }

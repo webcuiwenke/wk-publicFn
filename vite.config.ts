@@ -6,7 +6,7 @@ export default defineConfig({
       minify: true,
       pages: [
         {
-          entry: 'src/main.ts',
+          entry: 'src/my-publicFn',
           filename: 'index.html',
           template: '/index.html',
           // injectOptions: {
@@ -26,9 +26,9 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: './src/myLibrary.js', // 指定你的JS入口文件
-      name: 'MyLibrary', // 打包后暴露的全局变量名
-      fileName: (format: string) => `my-library.${format}.js`, // 输出的文件名格式
+      entry: './src/my-publicFn.ts', // 指定你的JS入口文件
+      name: 'my-publicFn', // 打包后暴露的全局变量名
+      fileName: (format: string) => `my-publicFn.${format}.js`, // 输出的文件名格式
     },
     rollupOptions: {
       // external: ['dependency'], // 如果你的库依赖了外部库，如'dependency'，需要在这里声明
