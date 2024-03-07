@@ -1,6 +1,7 @@
 {
   "name": "wk-publicfn",
   "version": "1.0.0",
+  "type": "module",
   "description": "-- @param {*} arr 遍历的数组\r -- @param {*} logic 每层处理的逻辑\r -- @param {*} childrenName 节点字段",
   "main": "dist/my-publicFn.umd.js",
   "files": [
