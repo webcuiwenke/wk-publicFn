@@ -230,7 +230,7 @@ export function desensitizeMobile(mobile) {
  * @param {*} str
  * @returns
  */
-function desensitizeEmail(email) {
+export function desensitizeEmail(email) {
   if (!email) return email;
   const atIndex = email.indexOf('@');
   if (atIndex === -1) return email;
