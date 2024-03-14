@@ -212,3 +212,33 @@ export function objBackStr(arr, ifStr1, ifStr2, backStr) {
     return "";
   }
 }
+
+/**
+ * 手机号脱敏函数
+ * @param {*} str
+ * @returns
+ */
+export function desensitizeMobile(mobile) {
+  if (!mobile) return mobile;
+  return mobile.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
+}
+// let phoneNumber = '13812345678';
+// console.log(desensitizeMobile(phoneNumber)); // 输出：138****5678
+
+/**
+ * 邮箱号脱敏函数
+ * @param {*} str
+ * @returns
+ */
+function desensitizeEmail(email) {
+  if (!email) return email;
+  const atIndex = email.indexOf('@');
+  if (atIndex === -1) return email;
+  const beforeAt = email.slice(0, atIndex);
+  const afterAt = email.slice(atIndex);
+  // 显示前后各两个字符，中间用星号代替
+  const maskedBeforeAt = beforeAt.replace(/(?<=.{2}).*(?=.{2}$)/g, '*'.repeat(beforeAt.length - 4));
+  return maskedBeforeAt + afterAt;
+}
+// let email = 'example@example.com';
+// console.log(desensitizeEmail(email)); // 输出：ex***le@example.com
